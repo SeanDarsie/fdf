@@ -6,7 +6,7 @@
 /*   By: sdarsie <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/09 20:06:37 by sdarsie           #+#    #+#             */
-/*   Updated: 2017/04/18 14:01:05 by sdarsie          ###   ########.fr       */
+/*   Updated: 2017/05/28 21:38:28 by sdarsie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,22 +61,14 @@ typedef struct	s_line
 	double			offx;
 }				t_line;
 
+void			n_x_rot(t_data *pts);
 void			bres_line(void *mlx, void *wind, t_data *p1, t_data *p2);
-
 t_data			*prep_data(char ***data, void *mlx, void *wind);
-
 t_data			*get_data(const int fd, void *mlx, void *wind);
-
 void			pass_pts(t_data *coords);
-
 int				begin(t_data *coords);
-
 void			clear_data(void *data, int flag);
-
 void			show_perspective(t_data *coords, char c);
-
 void			rot_matrices(t_data *coords, int deg, char dir);
-
 void			check(char ***raw);
-
 #endif
